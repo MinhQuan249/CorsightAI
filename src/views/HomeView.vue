@@ -12,22 +12,25 @@
     <!-- Spacer -->
     <div class="h-16" />
 
-    <!-- Các section khác sẽ được thêm dần -->
-    <!-- <UseCasesTabs /> -->
-    <!-- <AutonomousAISection /> -->
-    <!-- <TestimonialCarousel /> -->
-    <!-- <BookDemoPopup /> -->
+    <!-- Use Cases -->
+    <UseCasesTabs />
+
+    <!-- Autonomous AI Section -->
+    <AutonomousAISection />
+
+    <!-- Testimonials -->
+    <TestimonialCarousel />
+
+    <!-- CTA -->
+    <CallToAction />
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import HeroSection from '@/components/home/HeroSection.vue'
 import LogoMarquee from '@/components/home/LogoMarquee.vue'
 import UseCasesTabs from '@/components/home/UseCasesTabs.vue'
-// import TestimonialCarousel from '@/components/home/TestimonialCarousel.vue'
-// import AutonomousAISection from '@/components/home/AutonomousAISection.vue'
+import AutonomousAISection from '@/components/home/AutonomousAISection.vue'
+import TestimonialCarousel from '@/components/home/TestimonialCarousel.vue'
+import CallToAction from '@/components/home/CallToAction.vue'
 </script>
-
-<style scoped>
-/* Style toàn cục nếu cần thêm */
-</style>
