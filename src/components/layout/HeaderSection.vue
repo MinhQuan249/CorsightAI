@@ -13,12 +13,22 @@
         </router-link>
 
         <!-- Desktop nav -->
+        <!-- Desktop nav -->
         <nav class="hidden md:flex space-x-6">
-          <DropdownButton
-            v-for="item in menuItems"
-            :key="item.name"
-            :item="item"
-          />
+          <template v-for="item in menuItems" :key="item.name">
+            <DropdownButton
+              v-if="item.children"
+              :label="item.name"
+              :items="item.children"
+            />
+            <router-link
+              v-else
+              :to="item.to"
+              class="text-gray-800 hover:text-indigo-600 px-3 py-2"
+            >
+              {{ item.name }}
+            </router-link>
+          </template>
         </nav>
 
         <!-- CTA & Mobile toggle -->
