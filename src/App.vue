@@ -1,30 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="min-h-screen flex flex-col bg-white text-gray-900 font-sans">
+    <!-- Header cố định hoặc tùy chỉnh -->
+    <HeaderSection />
+
+    <!-- Nội dung chính (thay đổi theo route) -->
+    <main class="flex-1">
+      <router-view />
+    </main>
+
+    <!-- Footer -->
+    <FooterSection />
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
+import HeaderSection from './components/layout/HeaderSection.vue'
+import FooterSection from './components/layout/FooterSection.vue'
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style>
+/* Nếu bạn cần cấu hình font mặc định hoặc animation toàn cục */
 </style>

@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="flex flex-col">
+    <!-- Hero Section -->
+    <HeroSection />
+
+    <!-- Spacer -->
+    <div class="h-12" />
+
+    <!-- Logo Marquee -->
+    <LogoMarquee />
+
+    <!-- Spacer -->
+    <div class="h-16" />
+
+    <!-- Các section khác sẽ được thêm dần -->
+    <!-- <UseCasesTabs /> -->
+    <!-- <AutonomousAISection /> -->
+    <!-- <TestimonialCarousel /> -->
+    <!-- <BookDemoPopup /> -->
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-});
+<script setup>
+import HeroSection from '@/components/home/HeroSection.vue'
+import LogoMarquee from '@/components/home/LogoMarquee.vue'
+import UseCasesTabs from '@/components/home/UseCasesTabs.vue'
+// import TestimonialCarousel from '@/components/home/TestimonialCarousel.vue'
+// import AutonomousAISection from '@/components/home/AutonomousAISection.vue'
 </script>
+
+<style scoped>
+/* Style toàn cục nếu cần thêm */
+</style>
