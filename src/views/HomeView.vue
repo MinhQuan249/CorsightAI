@@ -1,7 +1,10 @@
 <template>
   <div class="flex flex-col">
-    <!-- Hero Section -->
-    <HeroSection />
+<!--    &lt;!&ndash; Hero Section &ndash;&gt;-->
+<!--    <HeroSection />-->
+
+    <!-- Threat Intelligence Section -->
+    <ThreatIntelligenceSection />
 
     <!-- Spacer -->
     <div class="h-12" />
@@ -28,6 +31,7 @@
 
 <script setup lang="ts">
 import HeroSection from '@/components/home/HeroSection.vue'
+import ThreatIntelligenceSection from '@/components/home/ThreatIntelligenceSection.vue'
 import LogoMarquee from '@/components/home/LogoMarquee.vue'
 import UseCasesTabs from '@/components/home/UseCasesTabs.vue'
 import AutonomousAISection from '@/components/home/AutonomousAISection.vue'

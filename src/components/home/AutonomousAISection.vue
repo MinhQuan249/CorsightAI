@@ -8,7 +8,8 @@
           <div class="text-indigo-600 text-4xl mb-4">🤖</div>
           <h3 class="text-xl font-semibold mb-2">Self-learning Models</h3>
           <p class="text-gray-600">
-            Continuously evolves based on real-world data, enabling higher accuracy in recognition and adaptation over time.
+            Continuously evolves based on real-world data, enabling higher accuracy in recognition
+            and adaptation over time.
           </p>
         </div>
 
@@ -16,7 +17,8 @@
           <div class="text-indigo-600 text-4xl mb-4">⚙️</div>
           <h3 class="text-xl font-semibold mb-2">Automated Deployment</h3>
           <p class="text-gray-600">
-            Instantly deploy new models and configurations without manual intervention or system downtime.
+            Instantly deploy new models and configurations without manual intervention or system
+            downtime.
           </p>
         </div>
 
@@ -24,7 +26,8 @@
           <div class="text-indigo-600 text-4xl mb-4">📈</div>
           <h3 class="text-xl font-semibold mb-2">Performance Optimization</h3>
           <p class="text-gray-600">
-            Automatically tunes itself for optimal performance across different hardware environments and use cases.
+            Automatically tunes itself for optimal performance across different hardware
+            environments and use cases.
           </p>
         </div>
       </div>

@@ -3,7 +3,8 @@
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-bold mb-4">Ready to unlock the future of facial recognition?</h2>
       <p class="text-lg mb-8">
-        Experience how Corsight AI can transform your organization with privacy-focused, real-time vision AI.
+        Experience how Corsight AI can transform your organization with privacy-focused, real-time
+        vision AI.
       </p>
       <router-link
         to="/contact"

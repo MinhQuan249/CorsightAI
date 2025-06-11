@@ -11,4 +11,3 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const category = route.params.id as string
 </script>
-

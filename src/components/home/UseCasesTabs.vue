@@ -10,10 +10,8 @@
           :key="tab.id"
           @click="selected = tab.id"
           :class="[
-            selected === tab.id
-              ? 'bg-indigo-600 text-white'
-              : 'bg-white text-indigo-600',
-            'px-4 py-2 rounded shadow hover:bg-indigo-100 transition'
+            selected === tab.id ? 'bg-indigo-600 text-white' : 'bg-white text-indigo-600',
+            'px-4 py-2 rounded shadow hover:bg-indigo-100 transition',
           ]"
         >
           {{ tab.name }}
@@ -46,16 +44,18 @@ const tabs = [
     id: 'law',
     name: 'Law Enforcement',
     title: 'Empower Public Safety Agencies',
-    content: 'Instantly match suspects, find missing persons, and reduce crime with real-time alerts and forensics.',
+    content:
+      'Instantly match suspects, find missing persons, and reduce crime with real-time alerts and forensics.',
     image: '/assets/images/law.jpg',
     link: '/industries/law',
-    badge: 'Popular'
+    badge: 'Popular',
   },
   {
     id: 'airports',
     name: 'Airports',
     title: 'Streamline Airport Operations',
-    content: 'Reduce security bottlenecks, enable seamless passenger flow, and enhance safety across all terminals.',
+    content:
+      'Reduce security bottlenecks, enable seamless passenger flow, and enhance safety across all terminals.',
     image: '/assets/images/airport.jpg',
     link: '/industries/airports',
   },
@@ -63,7 +63,8 @@ const tabs = [
     id: 'retail',
     name: 'Retail',
     title: 'Optimize Retail Experiences',
-    content: 'Deliver personalized experiences, deter theft, and understand in-store traffic with powerful analytics.',
+    content:
+      'Deliver personalized experiences, deter theft, and understand in-store traffic with powerful analytics.',
     image: '/assets/images/retail.jpg',
     link: '/industries/retail',
   },
@@ -71,7 +72,8 @@ const tabs = [
     id: 'prisons',
     name: 'Prisons',
     title: 'Secure Correctional Facilities',
-    content: 'Prevent impersonation, monitor inmate movements, and reinforce facility safety at all times.',
+    content:
+      'Prevent impersonation, monitor inmate movements, and reinforce facility safety at all times.',
     image: '/assets/images/prison.jpg',
     link: '/industries/prisons',
   },

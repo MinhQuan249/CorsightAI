@@ -1,36 +1,61 @@
-<!-- 📄 src/components/home/TestimonialCarousel.vue -->
 <template>
-  <section class="py-20 bg-white">
+  <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
 
-      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-        <div
-          v-for="(testimonial, index) in testimonials"
-          :key="index"
-          class="bg-gray-50 p-6 rounded-lg shadow-md w-full md:w-1/3 text-left"
-        >
-          <p class="text-gray-700 mb-4">“{{ testimonial.text }}”</p>
-          <div class="font-semibold text-indigo-600">{{ testimonial.author }}</div>
-        </div>
-      </div>
+      <swiper
+        :modules="[Navigation, Pagination, Autoplay]"
+        :slides-per-view="1"
+        :loop="true"
+        :autoplay="{ delay: 5000 }"
+        pagination
+        class="testimonial-swiper"
+      >
+        <swiper-slide v-for="(testimonial, index) in testimonials" :key="index">
+          <div class="max-w-2xl mx-auto text-center">
+            <p class="text-lg italic text-gray-700 mb-6">“{{ testimonial.quote }}”</p>
+            <h4 class="text-xl font-semibold text-indigo-600">{{ testimonial.name }}</h4>
+            <p class="text-gray-500">{{ testimonial.title }}</p>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper'
+
+SwiperCore.use([Navigation, Pagination, Autoplay])
+
 const testimonials = [
   {
-    text: 'Corsight AI has completely transformed the way we manage security.',
-    author: 'John Smith, Law Enforcement',
+    quote:
+      'Corsight AI has revolutionized our approach to security. Their technology is unmatched.',
+    name: 'John Doe',
+    title: 'Chief Security Officer, City Surveillance',
   },
   {
-    text: 'The accuracy and speed are unmatched. Highly recommended!',
-    author: 'Jane Doe, Airport Security',
+    quote:
+      'Thanks to Corsight, we’ve drastically improved operational efficiency in our retail chain.',
+    name: 'Jane Smith',
+    title: 'Head of Operations, RetailMax',
   },
   {
-    text: 'Incredible support and powerful features. It just works!',
-    author: 'Alex Johnson, Retail Manager',
+    quote: 'Unbelievable results and outstanding support from the Corsight team!',
+    name: 'Michael Nguyen',
+    title: 'Director of IT, TechSecure Solutions',
   },
 ]
 </script>
+
+<style scoped>
+.testimonial-swiper {
+  max-width: 700px;
+  margin: auto;
+}
+</style>

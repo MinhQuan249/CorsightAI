@@ -3,7 +3,11 @@
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-12">Why Choose Corsight AI</h2>
       <div class="grid gap-10 md:grid-cols-3 text-left">
-        <div v-for="feature in features" :key="feature.title" class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+        <div
+          v-for="feature in features"
+          :key="feature.title"
+          class="bg-white p-6 rounded-lg shadow hover:shadow-md transition"
+        >
           <div class="text-indigo-600 text-3xl mb-4">
             <component :is="feature.icon" />
           </div>

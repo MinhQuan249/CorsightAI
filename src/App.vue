@@ -1,9 +1,12 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-white text-gray-900 font-sans">
-    <!-- Header cố định hoặc tùy chỉnh -->
+  <div class="min-h-screen flex flex-col font-sans text-gray-900">
+    <!-- Header cố định -->
     <HeaderSection />
 
-    <!-- Nội dung chính (thay đổi theo route) -->
+    <!-- Offset để tránh header che mất nội dung -->
+    <div class="h-16 md:h-16"></div>
+
+    <!-- Nội dung chính -->
     <main class="flex-1">
       <router-view />
     </main>
@@ -17,7 +20,3 @@
 import HeaderSection from './components/layout/HeaderSection.vue'
 import FooterSection from './components/layout/FooterSection.vue'
 </script>
-
-<style>
-/* Nếu bạn cần cấu hình font mặc định hoặc animation toàn cục */
-</style>

@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="tab-content"
-    :class="{ hidden: !isActive }"
-    role="tabpanel"
-  >
+  <div class="tab-content" :class="{ hidden: !isActive }" role="tabpanel">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <!-- Text -->
       <div>
@@ -21,11 +17,7 @@
 
       <!-- Image -->
       <div class="relative">
-        <img
-          :src="image"
-          :alt="title"
-          class="rounded-lg shadow-md w-full h-auto object-cover"
-        />
+        <img :src="image" :alt="title" class="rounded-lg shadow-md w-full h-auto object-cover" />
         <div
           v-if="badge"
           class="absolute top-4 left-4 bg-indigo-500 text-white text-sm px-3 py-1 rounded-full"

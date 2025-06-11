@@ -1,40 +1,33 @@
 <template>
   <section class="bg-white py-8 overflow-hidden">
     <div class="relative w-full">
-      <div
-        class="flex animate-marquee whitespace-nowrap gap-10 items-center"
-      >
+      <div class="marquee-track flex whitespace-nowrap gap-10 items-center">
+        <!-- Logo chính -->
         <img
-          v-for="logo in logos"
-          :key="logo"
-          :src="`/assets/images/partners/${logo}`"
+          v-for="(src, index) in logoUrls"
+          :key="index"
+          :src="src"
           alt="Partner Logo"
-          class="h-12 sm:h-16 object-contain opacity-70 hover:opacity-100 transition"
+          class="h-12 sm:h-16 max-w-[140px] object-contain filter grayscale hover:grayscale-0 transition duration-300 cursor-pointer"
         />
-        <!-- Repeat logos for infinite loop -->
+
+        <!-- Bản sao để lặp vô hạn -->
         <img
-          v-for="logo in logos"
-          :key="logo + '-copy'"
-          :src="`/assets/images/partners/${logo}`"
+          v-for="(src, index) in logoUrls"
+          :key="'copy-' + index"
+          :src="src"
           alt="Partner Logo"
-          class="h-12 sm:h-16 object-contain opacity-70 hover:opacity-100 transition"
+          class="h-12 sm:h-16 max-w-[140px] object-contain filter grayscale hover:grayscale-0 transition duration-300 cursor-pointer"
         />
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-const logos = [
-  'oracle-1-scaled.png',
-  'Newsat-1.png',
-  'Milestone-Logo-Clear-Blue.png',
-  'google_play_logo-1.png',
-  'AusComply-1.png',
-  'appstore-1.png',
-  'genetec-inc-vector-logo-1.png',
-  'ISEG-Logo-1.png',
-]
+<script setup lang="ts">
+// Dùng Webpack require.context để import tất cả ảnh
+const context = require.context('@/assets/images/partners', false, /\.(png|jpe?g)$/)
+const logoUrls = context.keys().map(context)
 </script>
 
 <style scoped>
@@ -46,7 +39,8 @@ const logos = [
     transform: translateX(-50%);
   }
 }
-.animate-marquee {
-  animation: marquee 30s linear infinite;
+.marquee-track {
+  animation: marquee 60s linear infinite;
+  width: max-content;
 }
 </style>
